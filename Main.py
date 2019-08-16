@@ -288,7 +288,7 @@ def setup_game():
     myPlayer.name = player_name.capitalize()
     
     ## JOB COLLECTING ##
-    texteffect("\nWhat class do you to be: warrior, archer, or mage?\n",0.05)
+    texteffect("\nWhat class do you want to be: warrior, archer, or mage?\n",0.05)
     player_job = input("> ").lower()
     valid_jobs = ['warrior', 'archer', 'mage']
     if player_job in valid_jobs:

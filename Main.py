@@ -294,7 +294,7 @@ def setup_game():
     if player_job in valid_jobs:
         myPlayer.job = player_job
     while player_job not in valid_jobs:
-        texteffect("\nPlease select from: warrior, archer, or mage?\n",0.05)
+        texteffect("\nPlease select from: warrior, archer, or mage.\n",0.05)
         player_job = input("> ").lower()
         if player_job.lower() in valid_jobs:
             myPlayer.job = player_job

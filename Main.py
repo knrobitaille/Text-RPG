@@ -1,7 +1,7 @@
 """
 A basic text RPG created to help my learning of Python.
 
-Created the framework ofthe game using the following tutorial:
+Created the framework of the game using the following tutorial:
 https://www.youtube.com/playlist?list=PL1-slM0ZOosXf2oQYZpTRAoeuo0TPiGpm
 
 Once I had the framework, I wanted to dive in and make the game actual playable while learning more about Python.
@@ -375,9 +375,9 @@ def prompt():
         action = input ("> ")
     if action.lower() == 'quit':
         sys.exit()
-    elif action.lower() in ['move', 'go', 'travel', 'walk']:
+    elif action.lower() in ['move', 'm', 'go', 'travel', 'walk']:
         player_move(action.lower())
-    elif action.lower() in ['examine', 'inspect', 'interact', 'look']:
+    elif action.lower() in ['examine', 'e', 'inspect', 'interact', 'look']:
         player_examine(action.lower())
 
 ### PRINTS PLAYER LOCATION ###
@@ -575,7 +575,7 @@ def player_examine(examineAction):
                 haskeyquestion = input("You see something shiny. Do you pick it up?\n").lower()
             if haskeyquestion in ['y', 'yes']:
                 myPlayer.haskey = True
-                print("You clip the key on your belt.")
+                print("It was a key! You clip the key on your belt.")
             elif haskeyquestion in ['n', 'no']:
                 print("")
 
@@ -584,7 +584,7 @@ def player_examine(examineAction):
         if myPlayer.specialmove == '':
             print("There is a monster to the east. You should train before fighting the monster.")
         elif b3_pathblock == True:
-            monsterfight = input("Do you to fight the monster?\n").lower()
+            monsterfight = input("There is a monster to the east. Do you to fight the monster?\n").lower()
             while monsterfight not in ['y', 'yes', 'n', 'no']:
                 print("Invalid input. Please enter yes or no.") 
                 monsterfight = input("Do you to fight the monster?\n").lower()
